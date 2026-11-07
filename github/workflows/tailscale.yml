@@ -18,5 +18,9 @@ jobs:
           authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
           version: latest
 
-      - name: Check Status
-        run: tailscale status
+      - name: Afficher l IP Tailscale
+        run: |
+          echo "=========================================="
+          echo "MON ADRESSE IP TAILSCALE EST :"
+          tailscale ip -4
+          echo "=========================================="
