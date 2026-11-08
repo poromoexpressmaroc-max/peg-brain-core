@@ -16,8 +16,6 @@ jobs:
         uses: tailscale/github-action@v2
         with:
           authkey: ${{ secrets.TAILSCALE_AUTH_KEY }}
-          # On ajoute l'option d'Ephemeral pour éviter les conflits de session
-          ephemeral: true
 
       - name: Display Tailscale IP Address
         run: tailscale ip -4
